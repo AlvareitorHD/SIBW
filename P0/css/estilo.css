@@ -1,0 +1,28 @@
+/* selector { declaracion; propiedad/atributo = valor;}*/
+
+p {
+    color: rgb(20, 0, 90);
+}
+
+#primer {
+    color: orange;
+    border-style: solid;
+    border-color: chartreuse;
+}
+
+.principal{
+    background-color: brown;
+
+}
+
+.principal:hover{
+    font-size: 2em;
+}
+#imagen{
+    width: 15%;
+}
+
+nav{
+    display: grid;
+    flex-direction: column;
+}

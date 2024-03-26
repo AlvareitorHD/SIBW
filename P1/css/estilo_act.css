@@ -1,0 +1,164 @@
+
+/*Estilo para la cabecera*/
+.cabecera_principal {
+    background-color: #331e8f; /* Fondo azul */
+    border-color: blue; /* Color del borde de la cabecera */
+    border-style: ridge;  /* Forma del borde (línea contínua)*/
+    border-radius: 1em;   /* Redondeo de los bordes */
+    display: flex;        /* Activar flex para que todo se vea en fila*/
+}
+/* Caja con el título y las secciones */
+.contenido_cabecera {
+    display: flex;          /* Activar flex*/
+    flex-direction: column; /* Hacer que el título esté encima de las secciones */
+}
+/* Logotipo de la cabecera */
+.logo {
+    max-width: 100%; /* Ajusta el tamaño de la imagen del logo */
+}
+
+.enlace-imagen {
+    max-width: 20%;
+}
+
+/*Título de la cabecera*/
+#titulo_principal {
+    text-decoration: underline; /* SUBRAYAR TITULO*/
+    font-size: 250%; /* Ajusta el tamaño del título principal */
+    color: white; /* Cambia el color del texto según necesites */
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Fuente */
+}
+/*MENU 1 MENU 2 MENU 3*/
+.secciones {
+    display: flex; /* Flex para alinear las secciones en una fila */
+}
+/* Propiedades para cada sección (MENU 1, MENU 2, MENU 3) */
+.secciones a {
+    margin-left: 20px;
+    margin-right: 20px; /* Ajusta el espacio entre los menús */
+    color:aliceblue;  /* Color del texto */
+    background-color: rgb(3, 32, 23); /* Color de la caja del menú */
+    border-radius: 10%; /* Redondear bordes */
+    padding: 2%;      /* Espacio a dejar entre el texto y el borde */
+}
+/*Efecto de escalado al poner el ratón encima de cada MENU */
+.secciones a:hover{
+    font-size: 1.5em;
+    transition: font-size 0.3s ease; /* Hacer que el escalado sea suave */
+    border-style: ridge;
+}
+
+/* Propiedades para el cuerpo total de la página*/
+body {
+    padding: 1%; /* Un poco de padding para ver el fondo de la página */
+    background-image: url('https://i.pinimg.com/originals/7d/7c/79/7d7c79f57f2bf8fc2b43b9a5e5a2a96b.gif');
+    /* Ajustes para que el GIF de fondo no se altere al cambiar la ventana */
+    background-size: cover; /* Ajusta el tamaño del fondo para cubrir todo el cuerpo */
+    background-repeat: no-repeat; /* Evita la repetición del fondo */
+    background-attachment: fixed; /* Fija el fondo para que no se desplace con el contenido */
+}
+/* Estilo para el cuerpo de la página (no confundir con body) */
+.cuerpo{
+    display: flex; /* Alinear en una fila las dos columnas */
+    margin-top: 1em; /* Dejar margen entre arriba con la cabecera, y abajo con el footer */
+    margin-bottom: 1em;
+}
+/* Estilo de las columnas */
+.contenido{
+    border-radius: 1em;
+    border-color: black;
+    border-style: double;
+}
+/* Columna izquierda */
+#cuerpo_izq{
+    background-color: #444e50; /* Color de la columna*/
+    color: white;              /* Color del texto */
+    margin-right: 2em;           /* Dejar un hueco con la columna derecha para que se vea el fondo */
+    display: flex;               /* Activar flex para alinear el contenido futuro */
+    flex-direction: column;      /* Cada Elemento Auxiliar irá uno encima del otro */
+    padding: 1%;                 /* Dejar hueco entre el borde y el contenido */
+    justify-content: center;     /* Centrar en el eje horizontal los Elementos auxiliares */
+}
+/* Elementos auxiliares con el texto centrado */
+#ele{
+    text-align:center;
+}
+/* Columna principal */
+#cuerpo_der{
+    background-color: #145b64; /* Color del contenedor */
+    color: white;              /* Texto blanco */
+    font-family: Georgia, sans-serif;
+}
+/* Titulo + fecha + precio */
+.cabecera_actividad{
+    max-width: 100%;
+    width: 66%;
+    margin-left: 2%;
+    font-family: 'Cabin', sans-serif;
+    text-align: center;
+}
+/* Contenedor de imágenes de la actividad */
+.imagenes{
+    float: right;
+    width: 33%;
+}
+/* Contenedor de imagen con su pie de foto */
+.imagenes figure{
+    border-style:solid;
+    border-color: black;
+    border-radius: 5%;
+    padding: 2%;
+    text-align: center;
+}
+
+.tipoimg{
+    max-width: 100%; /* Establece el ancho máximo al 100% del contenedor */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la relación de aspecto */
+    border-radius: 5%;
+}
+/* descripción de la actividad */
+.descripcion{
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: auto;
+}
+/* Contenedor de lista de las redes */
+.redes{
+    float: left;
+    margin: 5%;
+    display: flex;
+    align-content: center;
+}
+/*Tamaños de cada red social e imprimir */
+.red{
+    width: 20%;
+    max-width: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+/*Tamaño máximo de la imagen dentro de su contenedor*/
+.red img{
+    max-width: 100%;
+}
+/* Para el botón de IMPRIMIR */
+.red p{
+    font-size: 2em;
+    text-align: center;
+    border-style: ridge;
+    border-radius: 5%;
+}
+/* Para quitar el subrayado y el azul/morado del enlace en IMPRIMIR */
+#imprimir{
+    text-decoration: none;
+    color: inherit;
+}
+
+#pie_principal{
+    background-color: #331e8f;
+    text-align: center;
+    color: white;
+    border-radius: 5%;
+    border-color: black;
+    border-width: 1em;
+    padding: 1%;
+}
