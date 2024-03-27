@@ -1,45 +1,56 @@
+body {
+    background-image: url("../imgs/background.gif");
+    /* Ajustes para que el GIF de fondo no se altere al cambiar la ventana */
+    background-size: cover; /* Ajusta el tamaño del fondo para cubrir todo el cuerpo */
+    /*background-repeat: no-repeat; /* Evita la repetición del fondo */
+    background-attachment: fixed; /* Fija el fondo para que no se desplace con el contenido */
+}
 
+/*FUENTE PERSONALIZADA*/
+@font-face {
+    font-family: 'fuente';
+    src: url('../fonts/ACMountain.otf') format('woff2');
+    /* Agrega otros atributos según sea necesario */
+}
 /*Estilo para la cabecera*/
-.cabecera_principal {
+.cabecera_principal{
     background-color: #331e8f; /* Fondo azul */
     border-color: blue; /* Color del borde de la cabecera */
     border-style: ridge;  /* Forma del borde (línea contínua)*/
     border-radius: 1em;   /* Redondeo de los bordes */
-    display: flex;        /* Activar flex para que todo se vea en fila*/
+}
+
+/* Logotipo de la cabecera */
+.enlace-imagen {
+    max-width: 20%; /* Ajusta el tamaño de la imagen del logo */
+    max-height: 20%;
+}
+.enlace-imagen img{
+    max-width: 100%;
 }
 /* Caja con el título y las secciones */
 .contenido_cabecera {
     display: flex;          /* Activar flex*/
     flex-direction: column; /* Hacer que el título esté encima de las secciones */
 }
-/* Logotipo de la cabecera */
-.logo {
-    max-width: 100%; /* Ajusta el tamaño de la imagen del logo */
-}
-
-.enlace-imagen {
-    max-width: 20%;
-}
 
 /*Título de la cabecera*/
 #titulo_principal {
     text-decoration: underline; /* SUBRAYAR TITULO*/
-    font-size: 250%; /* Ajusta el tamaño del título principal */
     color: white; /* Cambia el color del texto según necesites */
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Fuente */
+    font-family: 'fuente', sans-serif; /* Fuente */
+    font-size: 1em;
+    margin-bottom: 5%;
+    margin-right: 5%;
 }
-/*MENU 1 MENU 2 MENU 3*/
-.secciones {
-    display: flex; /* Flex para alinear las secciones en una fila */
-}
-/* Propiedades para cada sección (MENU 1, MENU 2, MENU 3) */
 .secciones a {
     margin-left: 20px;
     margin-right: 20px; /* Ajusta el espacio entre los menús */
     color:aliceblue;  /* Color del texto */
     background-color: rgb(3, 32, 23); /* Color de la caja del menú */
-    border-radius: 10%; /* Redondear bordes */
+    border-radius: 0.5em; /* Redondear bordes */
     padding: 2%;      /* Espacio a dejar entre el texto y el borde */
+    font-family: 'fuente', sans-serif; /* Fuente */
 }
 /*Efecto de escalado al poner el ratón encima de cada MENU */
 .secciones a:hover{
@@ -47,21 +58,11 @@
     transition: font-size 0.3s ease; /* Hacer que el escalado sea suave */
     border-style: ridge;
 }
+/*FIN CABECERA*/
 
-/* Propiedades para el cuerpo total de la página*/
-body {
-    padding: 1%; /* Un poco de padding para ver el fondo de la página */
-    background-image: url("../imgs/background.gif");
-    /* Ajustes para que el GIF de fondo no se altere al cambiar la ventana */
-    background-size: cover; /* Ajusta el tamaño del fondo para cubrir todo el cuerpo */
-    background-repeat: no-repeat; /* Evita la repetición del fondo */
-    background-attachment: fixed; /* Fija el fondo para que no se desplace con el contenido */
-}
 /* Estilo para el cuerpo de la página (no confundir con body) */
 .cuerpo{
     display: flex; /* Alinear en una fila las dos columnas */
-    margin-top: 1em; /* Dejar margen entre arriba con la cabecera, y abajo con el footer */
-    margin-bottom: 1em;
 }
 /* Estilo de las columnas */
 .contenido{
@@ -91,14 +92,18 @@ body {
 }
 /* Titulo + fecha + precio */
 .cabecera_actividad{
-    max-width: 100%;
-    width: 66%;
+    float: left;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    width: 60%;
     margin-left: 2%;
     font-family: 'Cabin', sans-serif;
     text-align: center;
 }
 /* Contenedor de imágenes de la actividad */
 .imagenes{
+    margin-top: 2%;
+    margin-right: 2%;
     float: right;
     width: 33%;
 }
@@ -110,7 +115,6 @@ body {
     padding: 2%;
     text-align: center;
 }
-
 .tipoimg{
     max-width: 100%; /* Establece el ancho máximo al 100% del contenedor */
     height: auto; /* Permite que la altura se ajuste automáticamente para mantener la relación de aspecto */
@@ -118,9 +122,11 @@ body {
 }
 /* descripción de la actividad */
 .descripcion{
+    float: left;
     margin-left: 2%;
     margin-right: 2%;
     padding: auto;
+    max-width: 60%;
 }
 /* Contenedor de lista de las redes */
 .redes{
@@ -128,6 +134,7 @@ body {
     margin: 5%;
     display: flex;
     align-content: center;
+    justify-content: center;
 }
 /*Tamaños de cada red social e imprimir */
 .red{
@@ -140,24 +147,15 @@ body {
 .red img{
     max-width: 100%;
 }
-/* Para el botón de IMPRIMIR */
-.red p{
-    font-size: 2em;
-    text-align: center;
-    border-style: ridge;
-    border-radius: 5%;
-}
-/* Para quitar el subrayado y el azul/morado del enlace en IMPRIMIR */
-#imprimir{
-    text-decoration: none;
-    color: inherit;
-}
 
+
+/*Pie de página*/
 #pie_principal{
+    margin-top: 1%;
     background-color: #331e8f;
     text-align: center;
     color: white;
-    border-radius: 5%;
+    border-radius: 1em;
     border-color: black;
     border-width: 1em;
     padding: 1%;
@@ -179,6 +177,7 @@ body {
 }
 
 .boton {
+    float: left;/*Evitar que el boton se vaya a la derecha automaticamente*/
     background-color: #4cacaf; /* Color de fondo */
     border: 2px solid #4c53af; /* Borde sólido */
     color: white; /* Color del texto */
@@ -204,6 +203,7 @@ font-size: 2em;
 }
 
 #comentarios{
+    float: left;
     background-color: #4cacaf;
     margin-left: 5%;
     margin-right: 5%;
@@ -216,7 +216,7 @@ font-size: 2em;
 }
 
 .comentario{
-    margin: 5%;
+    margin: 1%;
     padding: 1%;
     background-color: rgb(57, 128, 128);
     border-radius: 1em;

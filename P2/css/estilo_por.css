@@ -1,41 +1,53 @@
+body {
+    background-image: url("../imgs/background.gif");
+    /* Ajustes para que el GIF de fondo no se altere al cambiar la ventana */
+    background-size: cover; /* Ajusta el tamaño del fondo para cubrir todo el cuerpo */
+    /*background-repeat: no-repeat; /* Evita la repetición del fondo */
+    background-attachment: fixed; /* Fija el fondo para que no se desplace con el contenido */
+}
 
+/*FUENTE PERSONALIZADA*/
+@font-face {
+    font-family: 'fuente';
+    src: url('../fonts/ACMountain.otf') format('woff2');
+    /* Agrega otros atributos según sea necesario */
+}
 /*Estilo para la cabecera*/
-.cabecera_principal {
+.cabecera_principal{
     background-color: #331e8f; /* Fondo azul */
     border-color: blue; /* Color del borde de la cabecera */
     border-style: ridge;  /* Forma del borde (línea contínua)*/
     border-radius: 1em;   /* Redondeo de los bordes */
-    display: flex;        /* Activar flex para que todo se vea en fila*/
+}
+
+/* Logotipo de la cabecera */
+.logo {
+    width: 20%; /* Ajusta el tamaño de la imagen del logo */
+    height: 20%;
 }
 /* Caja con el título y las secciones */
 .contenido_cabecera {
     display: flex;          /* Activar flex*/
     flex-direction: column; /* Hacer que el título esté encima de las secciones */
 }
-/* Logotipo de la cabecera */
-.logo {
-    width: 20%; /* Ajusta el tamaño de la imagen del logo */
-    height: 20%;
-}
+
 /*Título de la cabecera*/
 #titulo_principal {
     text-decoration: underline; /* SUBRAYAR TITULO*/
-    font-size: 250%; /* Ajusta el tamaño del título principal */
     color: white; /* Cambia el color del texto según necesites */
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Fuente */
+    font-family: 'fuente', sans-serif; /* Fuente */
+    font-size: 1em;
+    margin-bottom: 5%;
+    margin-right: 5%;
 }
-/*MENU 1 MENU 2 MENU 3*/
-.secciones {
-    display: flex; /* Flex para alinear las secciones en una fila */
-}
-/* Propiedades para cada sección (MENU 1, MENU 2, MENU 3) */
 .secciones a {
     margin-left: 20px;
     margin-right: 20px; /* Ajusta el espacio entre los menús */
     color:aliceblue;  /* Color del texto */
     background-color: rgb(3, 32, 23); /* Color de la caja del menú */
-    border-radius: 10%; /* Redondear bordes */
+    border-radius: 0.5em; /* Redondear bordes */
     padding: 2%;      /* Espacio a dejar entre el texto y el borde */
+    font-family: 'fuente', sans-serif; /* Fuente */
 }
 /*Efecto de escalado al poner el ratón encima de cada MENU */
 .secciones a:hover{
@@ -43,28 +55,21 @@
     transition: font-size 0.3s ease; /* Hacer que el escalado sea suave */
     border-style: ridge;
 }
-/* Propiedades para el cuerpo total de la página*/
-body {
-    padding: 1%; /* Un poco de padding para ver el fondo de la página */
-    background-image: url("../imgs/background.gif");
-    /* Ajustes para que el GIF de fondo no se altere al cambiar la ventana */
-    background-size: cover; /* Ajusta el tamaño del fondo para cubrir todo el cuerpo */
-    /*background-repeat: no-repeat; /* Evita la repetición del fondo */
-    background-attachment: fixed; /* Fija el fondo para que no se desplace con el contenido */
-}
-/* Estilo para el cuerpo de la página (no confundir con body) */
-.cuerpo{
-    display: flex; /* Alinear en una fila las dos columnas */
-    margin-top: 1em; /* Dejar margen entre arriba con la cabecera, y abajo con el footer */
-    margin-bottom: 1em;
-}
+/*FIN CABECERA*/
+
+/*CUERPO GENERAL*/
 /* Estilo de las columnas */
+.cuerpo{
+    display: flex;
+}
 .contenido{
     border-radius: 1em;
     border-color: black;
     border-style: double;
 }
-/* Columna izquierda */
+/*FIN CUERPO GENERAL*/
+
+/*CUERPO IZQUIERDO*/
 #cuerpo_izq{
     background-color: #444e50; /* Color de la columna*/
     color: white;              /* Color del texto */
@@ -74,11 +79,10 @@ body {
     padding: 1%;                 /* Dejar hueco entre el borde y el contenido */
     justify-content: center;     /* Centrar en el eje horizontal los Elementos auxiliares */
 }
-/* Elementos auxiliares con el texto centrado */
 #ele{
     text-align:center;
 }
-
+/*FIN CUERPO IZQUIERDO*/
 /* Columna derecha como CONTENEDOR DE LAS ACTIVIDADES */
 #cuerpo_der{
     background-color: #1e828f; /* Color del contenedor */
@@ -86,6 +90,7 @@ body {
     display: grid; /* En vez de usar flex uso Grid para crear una "matriz dinámica" de las actividades */
     grid-template-columns: 1fr 1fr 1fr; /* Indico que cada fila de la matriz tendrá máximo 3 actividades */
 }
+
 /* Estilo para cada actividad */
 .actividad{
     display: flex; /* Activo flex para alinear verticalmente la imagen de la actividad con su título */
@@ -99,6 +104,7 @@ body {
     padding: 2%;        /* Espacio entre la foto y titulo con el borde */
     justify-content: center; /* Centrar actividad en el eje horizontal*/
     font-family: 'Cabin', sans-serif;
+    font-size: 1.2em;
 }
 /* Efecto de levantar la actividad del contenedor */
 .actividad:hover{
@@ -109,7 +115,8 @@ body {
 }
 /* Hacer que la imagen de cada actividad ocupe la mitad de la actividad */
 .img_actividad{
-    width:50%;
+    max-width:50%;
+    max-height: 50%;
     height: auto;
     margin-bottom: 5%;
     border-radius: 5%;
@@ -117,10 +124,11 @@ body {
 
 /*Pie de página*/
 #pie_principal{
+    margin-top: 1%;
     background-color: #331e8f;
     text-align: center;
     color: white;
-    border-radius: 5%;
+    border-radius: 1em;
     border-color: black;
     border-width: 1em;
     padding: 1%;

@@ -1,0 +1,127 @@
+
+/*Estilo para la cabecera*/
+.cabecera_principal {
+    background-color: #331e8f; /* Fondo azul */
+    border-color: blue; /* Color del borde de la cabecera */
+    border-style: ridge;  /* Forma del borde (línea contínua)*/
+    border-radius: 1em;   /* Redondeo de los bordes */
+    display: flex;        /* Activar flex para que todo se vea en fila*/
+}
+/* Caja con el título y las secciones */
+.contenido_cabecera {
+    display: flex;          /* Activar flex*/
+    flex-direction: column; /* Hacer que el título esté encima de las secciones */
+}
+/* Logotipo de la cabecera */
+.logo {
+    width: 20%; /* Ajusta el tamaño de la imagen del logo */
+    height: 20%;
+}
+/*Título de la cabecera*/
+#titulo_principal {
+    text-decoration: underline; /* SUBRAYAR TITULO*/
+    font-size: 250%; /* Ajusta el tamaño del título principal */
+    color: white; /* Cambia el color del texto según necesites */
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Fuente */
+}
+/*MENU 1 MENU 2 MENU 3*/
+.secciones {
+    display: flex; /* Flex para alinear las secciones en una fila */
+}
+/* Propiedades para cada sección (MENU 1, MENU 2, MENU 3) */
+.secciones a {
+    margin-left: 20px;
+    margin-right: 20px; /* Ajusta el espacio entre los menús */
+    color:aliceblue;  /* Color del texto */
+    background-color: rgb(3, 32, 23); /* Color de la caja del menú */
+    border-radius: 10%; /* Redondear bordes */
+    padding: 2%;      /* Espacio a dejar entre el texto y el borde */
+}
+/*Efecto de escalado al poner el ratón encima de cada MENU */
+.secciones a:hover{
+    font-size: 1.5em;
+    transition: font-size 0.3s ease; /* Hacer que el escalado sea suave */
+    border-style: ridge;
+}
+/* Propiedades para el cuerpo total de la página*/
+body {
+    padding: 1%; /* Un poco de padding para ver el fondo de la página */
+    background-image: url("../imgs/background.gif");
+    /* Ajustes para que el GIF de fondo no se altere al cambiar la ventana */
+    background-size: cover; /* Ajusta el tamaño del fondo para cubrir todo el cuerpo */
+    /*background-repeat: no-repeat; /* Evita la repetición del fondo */
+    background-attachment: fixed; /* Fija el fondo para que no se desplace con el contenido */
+}
+/* Estilo para el cuerpo de la página (no confundir con body) */
+.cuerpo{
+    display: flex; /* Alinear en una fila las dos columnas */
+    margin-top: 1em; /* Dejar margen entre arriba con la cabecera, y abajo con el footer */
+    margin-bottom: 1em;
+}
+/* Estilo de las columnas */
+.contenido{
+    border-radius: 1em;
+    border-color: black;
+    border-style: double;
+}
+/* Columna izquierda */
+#cuerpo_izq{
+    background-color: #444e50; /* Color de la columna*/
+    color: white;              /* Color del texto */
+    margin-right: 2em;           /* Dejar un hueco con la columna derecha para que se vea el fondo */
+    display: flex;               /* Activar flex para alinear el contenido futuro */
+    flex-direction: column;      /* Cada Elemento Auxiliar irá uno encima del otro */
+    padding: 1%;                 /* Dejar hueco entre el borde y el contenido */
+    justify-content: center;     /* Centrar en el eje horizontal los Elementos auxiliares */
+}
+/* Elementos auxiliares con el texto centrado */
+#ele{
+    text-align:center;
+}
+
+/* Columna derecha como CONTENEDOR DE LAS ACTIVIDADES */
+#cuerpo_der{
+    background-color: #1e828f; /* Color del contenedor */
+    color: white;              /* Texto blanco */
+    display: grid; /* En vez de usar flex uso Grid para crear una "matriz dinámica" de las actividades */
+    grid-template-columns: 1fr 1fr 1fr; /* Indico que cada fila de la matriz tendrá máximo 3 actividades */
+}
+/* Estilo para cada actividad */
+.actividad{
+    display: flex; /* Activo flex para alinear verticalmente la imagen de la actividad con su título */
+    flex-direction: column;
+    background-color: rgb(27, 87, 27); /* Color de la caja de cada actividad */
+    align-items: center; /* Centrar foto y título de la actividad en su caja */
+    text-align: center;  /* Centrar el título de la actividad en la caja de texto */
+    margin: 5%; /* Dejar margen con el contenedor de actividades */
+    color: white; /* Color texto */
+    border-radius: 10%; /* Redondear borde */
+    padding: 2%;        /* Espacio entre la foto y titulo con el borde */
+    justify-content: center; /* Centrar actividad en el eje horizontal*/
+    font-family: 'Cabin', sans-serif;
+}
+/* Efecto de levantar la actividad del contenedor */
+.actividad:hover{
+    box-shadow:  0 10px rgba(0, 0, 0, 0.7); /* Color de la sombra */
+    transform: translateY(-2.5%); /* Mover en el eje Y un poco la actividad */
+    transition: box-shadow 0.3s ease; /* Suavizar el efecto sombra */
+    border-style: ridge;
+}
+/* Hacer que la imagen de cada actividad ocupe la mitad de la actividad */
+.img_actividad{
+    width:50%;
+    height: auto;
+    margin-bottom: 5%;
+    border-radius: 5%;
+}
+
+/*Pie de página*/
+#pie_principal{
+    background-color: #331e8f;
+    text-align: center;
+    color: white;
+    border-radius: 5%;
+    border-color: black;
+    border-width: 1em;
+    padding: 1%;
+}
