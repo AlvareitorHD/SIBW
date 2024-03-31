@@ -101,6 +101,9 @@ body {
     font-family: 'Cabin', sans-serif;
     text-align: center;
 }
+.cabecera_actividad h1{
+    font-family: 'fuente';
+}
 /* Contenedor de imágenes de la actividad */
 .imagenes{
     margin-top: 2%;
@@ -149,6 +152,11 @@ body {
     max-width: 100%;
 }
 
+.red button{
+    width: 100%;
+    height: 100%;
+    font-size: auto;
+}
 
 /*Pie de página*/
 #pie_principal{
@@ -173,7 +181,7 @@ body {
     opacity: 1; /* Opacidad completa para mostrar el contenido */
 }
 .transicion{
-    transition:  max-height 0.5s ease; /* Transición de max-height con duración de 0.5 segundos */
+    transition:  max-height 0.5s, opacity 0.5s ease; /* Transición de max-height y opacity con duración de 0.5 segundos */
     overflow: hidden; /* Oculta el contenido que se desborda */
 }
 
@@ -235,6 +243,7 @@ font-size: 2em;
 }
 .fecha_usr{
     margin-left: auto;
+    font-size: 0.9em;
 }
 
 .error-message{

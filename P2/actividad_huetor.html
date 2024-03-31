@@ -49,7 +49,7 @@
             <!-- Elementos principales de la actividad -->
             <header class="cabecera_actividad">
                 <!-- Titulo actividad -->
-                <h1>SENDERISMO HUETOR SANTILLÁN</h1>
+                <h1>SENDERISMO HUETOR SANTILLAN</h1>
                 <!-- Fecha -->
                 <h2 id="fecha">24/05/24</h2>
                 <!-- Precio -->
@@ -114,7 +114,7 @@
                         src="./imgs/fc.png"></a>
                 <a class="red" href="https://twitter.com/aytobeasgr?lang=es"><img src="./imgs/x.png" /></a>
                 <a class="red">
-                    <button class="boton btn btn-lg" type="button" onclick="window.location.href='./actividad_imprimir_huetor.html'">IMPRIMIR</button>
+                    <button class="boton" type="button" onclick="window.location.href='./actividad_imprimir_huetor.html'">IMPRIMIR</button>
                 </a>
             </footer>
             <!-- Práctica 2: Sección de comentarios -->
@@ -125,16 +125,17 @@
                     <div class="mb-3">
                         <label for="name" class="form-label">Nombre</label>
                         <input type="name" class="form-control prohibida" id="name_input">
-                        <div id="errorName" class="error-message oculto">Nombre vacío o no válido</div>
+                        <div id="errorName" class="error-message oculto alert alert-danger">Nombre vacío o no válido</div>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail" class="form-label">Email</label>
                         <input type="email" class="form-control prohibida" id="exampleInputEmail1">
-                        <div id="emailError" class="error-message oculto">Formato de correo electrónico incorrecto</div>
+                        <div id="emailError" class="error-message oculto alert alert-danger">Correo electrónico vacío o formato incorrecto [usuario@dominio.tld]</div>
                     </div>
                     <div class="mb-3">
                         <label for="resena" class="form-label">Comentario</label>
                         <textarea class="form-control prohibida" id="input_resena"></textarea>
+                        <div id="resenaError" class="error-message oculto alert alert-danger">Obligatorio rellenar el comentario</div>
                     </div>
                     <button type="button" class="btn btn-primary" id="subir">Subir comentario</button>
                 </form>
@@ -154,7 +155,7 @@
                     <header class="cabecera_usr">
                         <img src="./imgs/jose.png">
                         <h2 class="nombre_usr">José</h2>
-                        <h3 class="fecha_usr">a las 16:00 del 13/05/2010</h3>
+                        <h3 class="fecha_usr">a las 16:00 del 13/5/2010</h3>
                     </header>
                     <p class="resena">
                         Simplemente Jose, Ouh yeah!
