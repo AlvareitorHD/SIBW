@@ -60,17 +60,18 @@ body {
 }
 /*FIN CABECERA*/
 
-/* Estilo para el cuerpo de la página (no confundir con body) */
-.cuerpo{
-    display: flex; /* Alinear en una fila las dos columnas */
-}
+/*CUERPO GENERAL*/
 /* Estilo de las columnas */
+.cuerpo{
+    display: flex;
+}
 .contenido{
     border-radius: 1em;
     border-color: black;
     border-style: double;
 }
-/* Columna izquierda */
+/*FIN CUERPO GENERAL*/
+/*CUERPO IZQUIERDO*/
 #cuerpo_izq{
     background-color: #444e50; /* Color de la columna*/
     color: white;              /* Color del texto */
@@ -80,10 +81,10 @@ body {
     padding: 1%;                 /* Dejar hueco entre el borde y el contenido */
     justify-content: center;     /* Centrar en el eje horizontal los Elementos auxiliares */
 }
-/* Elementos auxiliares con el texto centrado */
 #ele{
     text-align:center;
 }
+/*FIN CUERPO IZQUIERDO*/
 /* Columna principal */
 #cuerpo_der{
     background-color: #145b64; /* Color del contenedor */
@@ -164,7 +165,7 @@ body {
 /************Practica 2**********/
 
 .oculto{
-    max-height: 0; /* Altura máxima inicialmente cero para ocultar el contenido */
+    max-height: 0px; /* Altura máxima inicialmente cero para ocultar el contenido */
     opacity: 0; /* Opacidad inicialmente cero para ocultar el contenido */
 }
 .visible{
@@ -172,7 +173,7 @@ body {
     opacity: 1; /* Opacidad completa para mostrar el contenido */
 }
 .transicion{
-    transition:  max-height 0.5s ease; /* Transición de max-height con duración de 0.3 segundos */
+    transition:  max-height 0.5s ease; /* Transición de max-height con duración de 0.5 segundos */
     overflow: hidden; /* Oculta el contenido que se desborda */
 }
 
@@ -232,6 +233,10 @@ font-size: 2em;
     border-radius: 1em;
     margin-right: 1%;
 }
-.cabecera_usr h2{
-    margin-right: 1%;
+.fecha_usr{
+    margin-left: auto;
+}
+
+.error-message{
+    color: red;
 }

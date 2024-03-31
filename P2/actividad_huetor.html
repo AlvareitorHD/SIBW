@@ -1,48 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <title>Actividades Virgen de las Nieves</title>
     <!-- Icono de la ventana (se ha tenido que bajar la resolución al logo) -->
     <link rel="icon" href="./imgs/logo_vector_mini.png" type="image/png">
     <!-- Enlace a la hoja de estilos -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link href="./css/estilo_act.css" rel="stylesheet" type="text/css">
+    <script src="./js/script.js" defer></script>
 </head>
 
-<body>
+<body id="fondo" class="p-4">
     <!-- Cabecera principal -->
-    <header class="cabecera_principal">
-        <!-- Logotipo de la página que al clickarlo vuelves a la portada -->
-        <a class="enlace-imagen" href="./portada.html">
-            <img class="logo" src="./imgs/logo_vector.png">
+    <header class="cabecera_principal navbar navbar-expand-lg p-3 container-fluid">
+        <a href="./portada.html" class="enlace-imagen">
+            <img class="logo d-inline-block" src="./imgs/logo_vector.png" alt="logo">
         </a>
-        <!-- Título y secciones de la cabecera -->
-        <div class="contenido_cabecera">
-            <!-- Titulo de la página -->
-            <h1 id="titulo_principal">ACTIVIDADES VIRGEN DE LAS NIEVES</h1>
-            <!-- Secciones -->
-            <nav class="secciones">
-                <a href="#">
-                    <h2>MENÚ 1</h2>
-                </a>
-                <a href="#">
-                    <h2>MENÚ 2</h2>
-                </a>
-                <a href="#">
-                    <h2>MENÚ 3</h2>
-                </a>
-            </nav>
+        <div class="contenido_cabecera display-4">
+            <h1 class="navbar-brand" id="titulo_principal">ACTIVIDADES VIRGEN DE LAS NIEVES</h1>
+            <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-nav secciones">
+                    <a class="nav-link" href="#">MENU 1</a>
+                    <a class="nav-link" href="#">MENU 2</a>
+                    <a class="nav-link" href="#">MENU 3</a>
+                </div>
+            </div>
         </div>
     </header>
     <!-- FIN de la Cabecera -->
 
     <!-- Cuerpo de la página -->
-    <div class="cuerpo">
+    <div class="cuerpo container-fluid mt-4">
+        
         <!-- Columna izquierda del cuerpo -->
         <aside class="contenido" id="cuerpo_izq">
-            <div id="ele">
-                <h3>ELEMENTOS AUXILIARES</h3>
-            </div>
+        <div id="ele">            <h3>ELEMENTOS AUXILIARES</h3>            </div>
         </aside>
         <!-- FIN Columna izquierda -->
 
@@ -112,20 +110,64 @@
                     href="https://huetorsantillan.com/rutas/">AQUÍ</a>.
             </p>
             <footer class="redes">
-                <a class="red" href="https://www.facebook.com/HuetorSantillan/?locale=es_ES"><img
+                <a class="red" href="https://www.facebook.com/ayuntamiento.beasdegranada/?locale=es_ES"><img
                         src="./imgs/fc.png"></a>
-                <a class="red" href="https://twitter.com/i/flow/login?redirect_after_login=%2Fhuetorsantillan"><img
-                        src="./imgs/x.png" /></a>
-                <a class="red" id="imprimir" href="./actividad_imprimir_huetor.html">
-                    <p>IMPRIMIR</p>
+                <a class="red" href="https://twitter.com/aytobeasgr?lang=es"><img src="./imgs/x.png" /></a>
+                <a class="red">
+                    <button class="boton btn btn-lg" type="button" onclick="window.location.href='./actividad_imprimir_huetor.html'">IMPRIMIR</button>
                 </a>
             </footer>
+            <!-- Práctica 2: Sección de comentarios -->
+            <button type="menu" id="botoncom" class="boton">Comentarios</button>
+            <div id="comentarios" class="oculto transicion">
+                <!--Sección para comentar-->
+                <form class="p-3">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="name" class="form-control prohibida" id="name_input">
+                        <div id="errorName" class="error-message oculto">Nombre vacío o no válido</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control prohibida" id="exampleInputEmail1">
+                        <div id="emailError" class="error-message oculto">Formato de correo electrónico incorrecto</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="resena" class="form-label">Comentario</label>
+                        <textarea class="form-control prohibida" id="input_resena"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="subir">Subir comentario</button>
+                </form>
+                <!-- FIN FORM -->
+                <div class="comentario">
+                    <header class="cabecera_usr">
+                        <img src="./imgs/pepito.jpeg">
+                        <h2 class="nombre_usr">Pepito845</h2>
+                        <h3 class="fecha_usr">a las 15:00 del 21/12/2023</h3>
+                    </header>
+                    <p class="resena">
+                        Me gustó mucho la ruta de las trincheras de alrededor, además del vino mosto
+                        que hacen en el ayuntamiento.
+                    </p>
+                </div>
+                <div class="comentario">
+                    <header class="cabecera_usr">
+                        <img src="./imgs/jose.png">
+                        <h2 class="nombre_usr">José</h2>
+                        <h3 class="fecha_usr">a las 16:00 del 13/05/2010</h3>
+                    </header>
+                    <p class="resena">
+                        Simplemente Jose, Ouh yeah!
+                    </p>
+                </div>
         </main>
     </div>
 
     <footer id="pie_principal">
         <strong>© 2024 - Álvaro Ruiz Luzón <br> Casi todos los derechos reservados</strong>
     </footer>
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

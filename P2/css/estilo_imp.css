@@ -10,43 +10,24 @@
 }
 /* Logotipo de la cabecera */
 .logo {
-max-width: 75%; /* Ajusta el tamaño de la imagen del logo */
+max-width: 100%; /* Ajusta el tamaño de la imagen del logo */
 }
 /* Contenedor del logo que al hacer click redirige a la página de la actividad*/
 .enlace-imagen {
     position: absolute; /**/
     float: right;       /**/
-    max-width: 20%;     /* Anchura máxima del contenedor del logo*/
-    margin-left: 75%; /**/
+    max-width: 15%;     /* Anchura máxima del contenedor del logo*/
+    margin-left: 75%;
 }
 
 /*Título de la cabecera*/
 #titulo_principal {
+    float:left;
     text-decoration: underline; /* SUBRAYAR TITULO*/
     font-size: 250%; /* Ajusta el tamaño del título principal */
     color: white; /* Cambia el color del texto según necesites */
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Fuente */
 }
-/*MENU 1 MENU 2 MENU 3*/
-.secciones {
-    display: flex; /* Flex para alinear las secciones en una fila */
-}
-/* Propiedades para cada sección (MENU 1, MENU 2, MENU 3) */
-.secciones a {
-    margin-left: 20px;
-    margin-right: 20px; /* Ajusta el espacio entre los menús */
-    color:aliceblue;  /* Color del texto */
-    background-color: rgb(3, 32, 23); /* Color de la caja del menú */
-    border-radius: 10%; /* Redondear bordes */
-    padding: 2%;      /* Espacio a dejar entre el texto y el borde */
-}
-/*Efecto de escalado al poner el ratón encima de cada MENU */
-.secciones a:hover{
-    font-size: 1.5em;
-    transition: font-size 0.3s ease; /* Hacer que el escalado sea suave */
-    border-style: ridge;
-}
-
 /* Propiedades para el cuerpo total de la página*/
 body {
     padding: 1%; /* Un poco de padding para ver el fondo de la página */
@@ -64,27 +45,16 @@ body {
     border-color: black;
     border-style: double;
 }
-/* Columna izquierda */
 #cuerpo_izq{
-    background-color: #444e50; /* Color de la columna*/
-    color: white;              /* Color del texto */
-    margin-right: 2em;           /* Dejar un hueco con la columna derecha para que se vea el fondo */
-    display: none;               /* Desactivo Elementos Auxiliares */
-    flex-direction: column;      /* Cada Elemento Auxiliar irá uno encima del otro */
-    padding: 1%;                 /* Dejar hueco entre el borde y el contenido */
-    justify-content: center;     /* Centrar en el eje horizontal los Elementos auxiliares */
-}
-/* Elementos auxiliares con el texto centrado */
-#ele{
-    text-align:center;
+    display: none;
 }
 /* Columna principal */
 #cuerpo_der{
     /*background-color: #145b64; Color del contenedor */
     color: black;              /* Texto blanco */
     border-style: none;
+    float: left;
 }
-
 .cabecera_actividad{
     max-width: 100%;
     width: 66%;
@@ -93,8 +63,9 @@ body {
 }
 
 .imagenes{
+    margin-top: 5%;
     float: right;
-    width: 33%;
+    width: 30%;
 }
 .imagenes figure{
     border-style:none;

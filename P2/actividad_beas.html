@@ -129,28 +129,33 @@
                     <button class="boton btn btn-lg" type="button" onclick="window.location.href='./actividad_imprimir_beas.html'">IMPRIMIR</button>
                 </a>
             </footer>
+
             <!-- Práctica 2: Sección de comentarios -->
             <button type="menu" id="botoncom" class="boton">Comentarios</button>
             <div id="comentarios" class="oculto transicion">
                 <!--Sección para comentar-->
                 <form class="p-3">
                     <div class="mb-3">
-                        <label for="exampleInputEmail" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text text-light">Por ahora no vamos a almacenar tu comentario :(</div>
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="name" class="form-control" id="name_input">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
+                        <label for="exampleInputEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1">
+                        <div id="emailError" class="error-message">Formato de correo electrónico incorrecto</div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Subir comentario</button>
+                    <div class="mb-3">
+                        <label for="resena" class="form-label">Comentario</label>
+                        <textarea class="form-control" id="input_resena"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="subir">Subir comentario</button>
                 </form>
                 <!-- FIN FORM -->
                 <div class="comentario">
                     <header class="cabecera_usr">
                         <img src="./imgs/pepito.jpeg">
                         <h2 class="nombre_usr">Pepito845</h2>
-                        <h3 class="fecha_usr">20/12/2023</h3>
+                        <h3 class="fecha_usr">21/12/2023</h3>
                     </header>
                     <p class="resena">
                         Me gustó mucho la ruta de las trincheras de alrededor, además del vino mosto
@@ -161,7 +166,7 @@
                     <header class="cabecera_usr">
                         <img src="./imgs/jose.png">
                         <h2 class="nombre_usr">José</h2>
-                        <h3 class="fecha_usr">12/05/2010</h3>
+                        <h3 class="fecha_usr">13/05/2010</h3>
                     </header>
                     <p class="resena">
                         Simplemente Jose, Ouh yeah!
